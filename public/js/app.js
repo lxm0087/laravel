@@ -10371,7 +10371,7 @@ jQuery.extend( {
 
 
 // These usually indicate a programmer mistake during development,
-// warn static_pages them ASAP rather than swallowing them by default.
+// warn about them ASAP rather than swallowing them by default.
 var rerrorNames = /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
 
 jQuery.Deferred.exceptionHook = function( error, stack ) {
@@ -11180,7 +11180,7 @@ function showHide( elements, show ) {
 
 			// Since we force visibility upon cascade-hidden elements, an immediate (and slow)
 			// check is required in this first loop unless we have a nonempty display value (either
-			// inline or static_pages-to-be-restored)
+			// inline or about-to-be-restored)
 			if ( display === "none" ) {
 				values[ index ] = dataPriv.get( elem, "display" ) || null;
 				if ( !values[ index ] ) {
@@ -12784,7 +12784,7 @@ var rboxStyle = new RegExp( cssExpand.join( "|" ), "i" );
 
 ( function() {
 
-	// Executing both pixelPosition & boxSizingReliable tests require only one layouts
+	// Executing both pixelPosition & boxSizingReliable tests require only one layout
 	// so they're executed at the same time to save the second computation.
 	function computeStyleTests() {
 
@@ -36546,7 +36546,7 @@ var modifiers = {
    * Modifier used to make sure the reference and its popper stay near each other
    * without leaving any gap between the two. Especially useful when the arrow is
    * enabled and you want to ensure that it points to its reference element.
-   * It cares only static_pages the first axis. You can still have poppers with margin
+   * It cares only about the first axis. You can still have poppers with margin
    * between the popper and its reference element.
    * @memberof modifiers
    * @inner
@@ -37223,7 +37223,7 @@ try {
 	if (typeof window === "object") g = window;
 }
 
-// g can still be undefined, but nothing to do static_pages it...
+// g can still be undefined, but nothing to do about it...
 // We return undefined, instead of nothing here, so it's
 // easier to handle this case. if(!global) { ...}
 
