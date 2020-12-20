@@ -4,7 +4,9 @@
     <div  class="col-md-8 offset-md-2">
         <div class="card">
             <div class="card-header">
-                <form method="post" action="{{route( 'users.store' )}}}">
+                <form method="post" action="{{route( 'users.store' )}}">
+                    {{ csrf_field() }}
+
                     <div class="form-group">
                         <lable for="name">名称：</lable>
                         <input type="text" name="name" class="form-control" value="{{ old('name')  }}">
