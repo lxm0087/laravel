@@ -4,6 +4,9 @@
     <div  class="col-md-8 offset-md-2">
         <div class="card">
             <div class="card-header">
+
+                @include('shared._error')
+
                 <form method="post" action="{{route( 'users.store' )}}">
                     {{ csrf_field() }}
 
