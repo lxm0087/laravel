@@ -20,7 +20,7 @@ class UsersController extends Controller
         ]);
     }
     public function index(){
-        $users = User::pagenate(6);
+        $users = User::paginate(6);
         return view('users.index',compact('users'));
     }
     public function create(){
@@ -68,5 +68,12 @@ class UsersController extends Controller
            'password'=>bcrypt($request->password)
        ]);
        return redirect()->route('users.show',$user->id);
+    }
+
+    public function destory(User $user){
+        $this->authorize('destory',$user);
+        $user->delete();
+        session()->flash('success','成功删除用户');
+        return back();
     }
 }
