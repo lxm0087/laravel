@@ -26,4 +26,8 @@ class Userpolicy
     public function delete(User $currentUser, User $user){
         return $currentUser->is_admin = 1 && $currentUser->id !== $user->id;
     }
+
+    public function follow(User $currentUser,User $user){
+        return $currentUser->id !== $user->id;
+    }
 }
